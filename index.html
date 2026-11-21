@@ -44,6 +44,7 @@
   }
   h1 { font-size: 1.7rem; line-height: 1.2; margin: 0 0 4px; }
   h2 { font-size: 1.15rem; margin: 28px 0 6px; color: var(--accent); }
+  h3 { font-size: 1rem; margin: 20px 0 4px; }
   .meta { color: var(--muted); margin: 0 0 20px; }
   .meta p { margin: 2px 0; }
   ul { padding-left: 1.2em; }
@@ -56,12 +57,12 @@
 <main>
   <h1>Privacy Policy: Tusok! Tusok!</h1>
   <div class="meta">
-    <p><strong>Effective date:</strong> 20 November 2026</p>
+    <p><strong>Effective date:</strong> 21 November 2026</p>
     <p><strong>Developer:</strong> Symflo IT Solutions, Philippines</p>
     <p><strong>Contact:</strong> <a href="mailto:support@symflo.dev">support@symflo.dev</a></p>
   </div>
 
-  <p>Tusok! Tusok! ("the game") is a game you play on your own, with two optional ways to play with a friend online (below). We don't ask for your name, email, location, contacts or photos, and the game has no chat. Accounts are optional and only for cloud save and Bisita (below).</p>
+  <p>Tusok! Tusok! ("the game") is a game you play on your own, with two optional ways to play with a friend online (below). The game never asks you to type your name or email, it doesn't ask for your location, contacts or photos, and it has no chat. Accounts are optional and only for cloud save and Bisita (below).</p>
 
   <h2>What stays on your device</h2>
   <ul>
@@ -71,10 +72,11 @@
   <p>Deleting the game deletes all of this.</p>
 
   <h2 id="cloud-save">Cloud save (optional)</h2>
-  <p>If you sign in with Google or Apple in the game's settings, we keep a copy of your save online so you can get it back on another phone. This uses <strong>Firebase</strong> (Google), which stores:</p>
+  <p>If you sign in with Google, Apple or Facebook in the game's settings, we keep a copy of your save online so you can get it back on another phone. This uses <strong>Firebase</strong> (Google), which stores:</p>
   <ul>
     <li>an account ID, and the sign-in method you used;</li>
     <li>if you sign in with Google: the name, email address and profile picture link Google shares at sign-in (Apple sign-in shares none of these with us);</li>
+    <li>if you sign in with Facebook: your name, your Facebook ID for this game and your profile picture link, as Facebook shares them at sign-in (we don't ask Facebook for your email);</li>
     <li>your save (the same game progress as above) and when it was last saved.</li>
   </ul>
   <p>We use these only to keep and restore your save. They're not shared with anyone else or used for advertising. If you never sign in, none of this is created.</p>
@@ -85,11 +87,16 @@
   <ul>
     <li><strong>Sabay na Tinda</strong> (two phones, one kariton). The game signs in to Firebase with a temporary anonymous ID (no name, email or account) and opens a room in the Firebase Realtime Database. The room holds its six-letter code, the two players' anonymous IDs, the face and kariton look each picked in the game, and the day being played (the orders and what's in the kitchen). The host's phone deletes the room when it's closed. A room left open holds nothing more, and its code can be used again after six hours.</li>
     <li><strong>Bisita</strong> (visiting a friend's kariton). If you're signed in for cloud save and choose <strong>Gawin ang card ko</strong>, we keep a card in Firebase (Cloud Firestore): your friend code, the face you picked, your kariton's look and Gamit, your day, rating, suki and tatak counts, and the foods and drinks you sell. It has no name. Anyone signed in to the game who has your code can see it. We also keep whom you've added (by account ID), and each Bilin you send or receive (an order picked from set choices) until it's been served and seen. The name you give a friend in the game stays on your phone.</li>
+    <li id="facebook"><strong>Finding friends on Facebook</strong> (in versions of the game that offer it). If you sign in with Facebook or choose <strong>Hanapin sa Facebook</strong> in Bisita, the game asks Facebook for your public profile and your friend list. Facebook only ever gives us the friends who also play Tusok! Tusok! and allowed the same. The game uses that list on your phone to find which of them play and adds them to your Bisita friends, as if you had typed their friend codes; the list itself isn't stored. To let your friends find you, we keep in Firebase your Facebook ID for this game (a number Facebook makes for this game only, not your username), your game account ID and your first name. Your Facebook friends who play see that first name beside your Bisita card. Only someone who already has your Facebook ID for this game can look it up, and Facebook gives it only to your Facebook friends who play. We never post to Facebook, and we don't read your posts, photos, messages or other friends.</li>
   </ul>
-  <p>We use these only to make these features work. They're not shared with anyone else or used for advertising. Deleting your account deletes your Bisita card, friend code, friend list and Bilins too (below).</p>
+  <p>We use these only to make these features work. They're not shared with anyone else or used for advertising. Deleting your account deletes your Bisita card, friend code, Facebook ID and first name, friend list and Bilins too (below).</p>
+
+  <h3>Meta's Facebook SDK</h3>
+  <p>Versions of the game that offer Facebook include Meta's Facebook SDK, which shows Facebook's login. We've turned off its automatic app events and its use of your advertising ID. On iPhone it always uses Facebook's Limited Login, which doesn't track you. On Android the SDK stays off until you tap a Facebook button; on iPhone it starts with the game and may contact Meta to load its settings, which shares your IP address and basic device and app information with Meta. When you log in with Facebook, Meta handles that login under its own policy: <a href="https://www.facebook.com/privacy/policy/">facebook.com/privacy/policy</a>. You can remove the game from your Facebook account at any time in Facebook's <strong>Settings &amp; privacy → Settings → Apps and websites</strong>; it then gets nothing more from Facebook.</p>
 
   <h2 id="delete-account">Deleting your cloud save and account</h2>
-  <p>In the game: <strong>Mga setting → Cloud save → Burahin ang account</strong>. This deletes your online save, your Bisita card, friend code, friend list and Bilins, and your account at once; the save on your phone stays. If you no longer have the game, email <a href="mailto:support@symflo.dev">support@symflo.dev</a> from the address you signed in with (or tell us your Apple sign-in) and we'll delete all of it within 30 days. Signing out alone doesn't delete anything.</p>
+  <p>In the game: <strong>Mga setting → Cloud save → Burahin ang account</strong>. This deletes your online save, your Bisita card, friend code, Facebook ID and first name, friend list and Bilins, and your account at once; the save on your phone stays. If you no longer have the game, email <a href="mailto:support@symflo.dev">support@symflo.dev</a> from the address you signed in with (or tell us your Apple sign-in, or the name on the Facebook account you used) and we'll delete all of it within 30 days. Signing out alone doesn't delete anything.</p>
+  <p>If you used Facebook: removing the game in Facebook's <strong>Settings &amp; privacy → Settings → Apps and websites</strong> stops it getting anything more from Facebook. To delete what we already keep, use <strong>Burahin ang account</strong> or email us as above.</p>
 
   <h2 id="purchases">Purchases (optional)</h2>
   <p>The game sells optional looks for your kariton (<strong>Porma</strong>) and lets you tip the developer (<strong>Ilibre si dev</strong>). They change how the game looks, nothing else. Payment is handled by the App Store or Google Play; we never see your card or payment details.</p>
