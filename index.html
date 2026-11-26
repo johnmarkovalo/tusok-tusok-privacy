@@ -57,12 +57,12 @@
 <main>
   <h1>Privacy Policy: Tusok! Tusok!</h1>
   <div class="meta">
-    <p><strong>Effective date:</strong> 22 November 2026</p>
+    <p><strong>Effective date:</strong> 26 November 2026</p>
     <p><strong>Developer:</strong> Symflo IT Solutions, Philippines</p>
     <p><strong>Contact:</strong> <a href="mailto:support@symflo.dev">support@symflo.dev</a></p>
   </div>
 
-  <p>Tusok! Tusok! ("the game") is a game you play on your own, with two optional ways to play with a friend online (below). The game never asks you to type your name or email, it doesn't ask for your location, contacts or photos, and it has no chat. Accounts are optional and only for cloud save and Bisita (below).</p>
+  <p>Tusok! Tusok! ("the game") is a game you play on your own, with two optional ways to play with a friend online (below). The game never asks you to type your name or email, it doesn't ask for your location, contacts or photos, and it has no text chat. In versions that offer it, the two players of a Sabay na Tinda room can talk by voice if both turn on the mic (<a href="#voice">below</a>). Accounts are optional and only for cloud save and Bisita (below).</p>
 
   <h2>What stays on your device</h2>
   <ul>
@@ -83,13 +83,18 @@
   <p>Firebase's privacy information: <a href="https://firebase.google.com/support/privacy">firebase.google.com/support/privacy</a></p>
 
   <h2 id="multiplayer">Playing with a friend (optional)</h2>
-  <p>Both use <strong>Firebase</strong> (Google) and need an internet connection. Nothing you type is sent: everything players send each other is picked from set choices in the game.</p>
+  <p>Both use <strong>Firebase</strong> (Google) and need an internet connection. Nothing you type is sent: apart from your voice, if you turn on the mic in Sabay na Tinda (<a href="#voice">below</a>), everything players send each other is picked from set choices in the game.</p>
   <ul>
     <li><strong>Sabay na Tinda</strong> (two phones, one kariton). The game signs in to Firebase with a temporary anonymous ID (no name, email or account) and opens a room in the Firebase Realtime Database. The room holds its six-letter code, the two players' anonymous IDs, the face and kariton look each picked in the game, and the day being played (the orders and what's in the kitchen). The host's phone deletes the room when it's closed. A room left open holds nothing more, and its code can be used again after six hours.</li>
     <li><strong>Bisita</strong> (visiting a friend's kariton). If you're signed in for cloud save and choose <strong>Gawin ang card ko</strong>, we keep a card in Firebase (Cloud Firestore): your friend code, the face you picked, your kariton's look and Gamit, your day, rating, suki and tatak counts, and the foods and drinks you sell. It has no name. Anyone signed in to the game who has your code can see it. We also keep whom you've added (by account ID), a note that you added them (so their game adds you back: friends in Bisita are friends both ways) until their game has seen it, and each Bilin you send or receive (an order picked from set choices) until it's been served and seen. Removing a friend removes you from their list too. The name you give a friend in the game stays on your phone.</li>
     <li id="facebook"><strong>Finding friends on Facebook</strong> (in versions of the game that offer it). If you sign in with Facebook or choose <strong>Hanapin sa Facebook</strong> in Bisita, the game asks Facebook for your public profile and your friend list. Facebook only ever gives us the friends who also play Tusok! Tusok! and allowed the same. The game uses that list on your phone to find which of them play and adds them to your Bisita friends, as if you had typed their friend codes; the list itself isn't stored. To let your friends find you, we keep in Firebase your Facebook ID for this game (a number Facebook makes for this game only, not your username), your game account ID and your first name. Your Facebook friends who play see that first name beside your Bisita card. Only someone who already has your Facebook ID for this game can look it up, and Facebook gives it only to your Facebook friends who play. We never post to Facebook, and we don't read your posts, photos, messages or other friends.</li>
   </ul>
   <p>We use these only to make these features work. They're not shared with anyone else or used for advertising. Deleting your account deletes your Bisita card, friend code, Facebook ID and first name, friend list, notes, Bilins and notification addresses too (below).</p>
+
+  <h3 id="voice">Talking in Sabay na Tinda (optional)</h3>
+  <p>In versions of the game that offer it, the two players of a Sabay na Tinda room can talk while they play. The microphone stays off until you tap the mic button; the first time, your phone asks whether the game may use it. Nothing is heard until <strong>both</strong> players have turned their mic on, and either of you can turn it off at any time, which ends it for both. The game lets go of the microphone while you're switched away from it, turns it off when you leave the room, and starts every new room with it off.</p>
+  <p>Your voice goes from your phone to the other player's phone, encrypted. When the two phones can't reach each other directly, it passes through a relay run by <strong>Cloudflare</strong>, which forwards it without being able to listen to it. <strong>Your voice is never recorded or stored</strong>, by us, Cloudflare or anyone else. To connect, the two phones swap their internet (IP) addresses through the room, so the other player's phone learns yours; they're deleted with the room. To use the relay, the game asks our server (Firebase, Google) for a login that lasts two hours. The server checks that you're in the room and counts the calls each player's ID sets up in a day, to stop misuse; old counts are deleted as new calls are set up.</p>
+  <p>Cloudflare's privacy policy: <a href="https://www.cloudflare.com/privacypolicy/">cloudflare.com/privacypolicy</a></p>
 
   <h3 id="notifications">Notifications (optional)</h3>
   <p>Once you've made a Bisita card or added a friend, the game asks if it may send you notifications. If you allow them, it uses <strong>Firebase Cloud Messaging</strong> (Google) and we keep, under your account, your phone's notification address for this game (a token Firebase makes), whether the phone is Android or iPhone, and the game's language. Firebase uses them to tell you when a friend adds you, leaves a Bilin at your kariton, or has cooked yours. The notifications never name anyone. Until you've been asked, Firebase Cloud Messaging stays off on your phone. Signing out removes that phone's address; turning notifications off in your phone's settings stops them, and the game removes the address the next time it opens.</p>
